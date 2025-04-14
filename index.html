@@ -88,15 +88,6 @@
             </div>
 
             <div class="filter-group">
-                <label>DR Confirmation:</label>
-                <select id="confirmation-filter">
-                    <option value="">All</option>
-                    <option value="long">Long</option>
-                    <option value="short">Short</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
                 <label>M7 Box Confirmation:</label>
                 <select id="m7-box-confirmation-filter">
                     <option value="">All</option>
@@ -106,11 +97,22 @@
             </div>
 
             <div class="filter-group">
-                <label>Beyond M7 Box:</label>
-                <select id="beyond-m7-box-filter">
+                <label>DR Confirmation:</label>
+                <select id="confirmation-filter">
                     <option value="">All</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="long">Long</option>
+                    <option value="short">Short</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>M7 Box Retracement Level:</label>
+                <select id="m7-box-retracement-level-filter">
+                    <option value="">All</option>
+                    <option value="above">Above the M7 Box</option>
+                    <option value="inside">Inside the M7 Box</option>
+                    <option value="below">Below the M7 Box</option>
                 </select>
             </div>
             
@@ -149,8 +151,8 @@
                 </div>
 
                 <div class="stat-box">
-                    <h3>Beyond M7 Box</h3>
-                    <p id="beyond-m7-box-stats">0 (0%)</p>
+                    <h3>Retracement Levels</h3>
+                    <p id="retracement-level-stats">0 (0%)</p>
                 </div>
             </div>
         </div>
@@ -197,14 +199,14 @@
             </div>
             
             <div class="chart-container">
-                <h3 id="beyond-m7-box-chart-title">Beyond M7 Box Probability - RDR</h3>
+                <h3 id="retracement-level-chart-title">M7 Box Retracement Level Probability - RDR</h3>
                 <div class="chart-wrapper">
-                    <canvas id="beyondM7BoxChart"></canvas>
+                    <canvas id="retracementLevelChart"></canvas>
                 </div>
-                <div class="data-details" id="beyond-m7-box-details">
-                    <p><strong>Green M7 Box:</strong> 0% beyond M7 box rate (0/0)</p>
-                    <p><strong>Red M7 Box:</strong> 0% beyond M7 box rate (0/0)</p>
-                    <p><strong>Equal M7 Box:</strong> 0% beyond M7 box rate (0/0)</p>
+                <div class="data-details" id="retracement-level-details">
+                    <p><strong>Green M7 Box:</strong> 0% retracement level distribution</p>
+                    <p><strong>Red M7 Box:</strong> 0% retracement level distribution</p>
+                    <p><strong>Equal M7 Box:</strong> 0% retracement level distribution</p>
                 </div>
             </div>
         </div>
@@ -231,9 +233,9 @@
                         <th>Date</th>
                         <th id="box-color-header">RDR M7 Box Color</th>
                         <th id="box-size-header">RDR M7 Box Size</th>
-                        <th>DR Confirmation</th>
                         <th>M7 Box Confirmation</th>
-                        <th>Beyond M7 Box</th>
+                        <th>DR Confirmation</th>
+                        <th>M7 Box Retracement Level</th>
                         <th>False Day</th>
                         <th>Return to M7 Box</th>
                         <th>M7 Box Retracement</th>
