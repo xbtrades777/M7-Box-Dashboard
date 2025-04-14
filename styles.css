@@ -171,6 +171,11 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+.chart-container.full-width {
+  grid-column: 1 / -1;
+  margin-bottom: 30px;
+}
+
 .chart-container h3 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -199,6 +204,7 @@ body {
   border-radius: 6px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow-x: auto;
 }
 
 .data-table h2 {
@@ -240,6 +246,16 @@ td.red {
 td.equal {
   background-color: rgba(0, 0, 255, 0.1);
   color: blue;
+}
+
+/* Yes/No styling */
+td.yes {
+  color: green;
+  font-weight: bold;
+}
+
+td.no {
+  color: #999;
 }
 
 /* Footer */
