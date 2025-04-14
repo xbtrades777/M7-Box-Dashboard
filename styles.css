@@ -151,7 +151,7 @@ body {
 
 .stat-box p {
   margin: 0;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -259,6 +259,25 @@ td.short {
   font-weight: bold;
 }
 
+td.none {
+  color: #999;
+  font-style: italic;
+}
+
+/* Retracement level styling */
+td.above {
+  color: green;
+}
+
+td.inside {
+  color: #ff9800;
+}
+
+td.below {
+  color: red;
+}
+
+/* Retracement timing styling */
 td.before {
   color: #ff9800;
 }
@@ -289,7 +308,19 @@ td.no {
   margin: 0;
 }
 
-/* Responsive layout continued */
+/* Responsive layout */
+@media (min-width: 768px) {
+  .probability-charts {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .chart-container {
+    flex: 1;
+    min-width: 45%;
+  }
+}
+
 @media (max-width: 768px) {
   .session-options {
     flex-direction: column;
