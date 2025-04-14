@@ -1,57 +1,38 @@
-// Sample data for the M7 Box Dashboard
+// Sample data for the M7 Box Dashboard with additional fields
 const sampleData = {
   rdr: [
-    { date: '2025-04-13', boxColor: 'green', boxSize: '0.35', confirmation: true, falseDay: false },
-    { date: '2025-04-12', boxColor: 'red', boxSize: '-0.42', confirmation: true, falseDay: true },
-    { date: '2025-04-11', boxColor: 'green', boxSize: '0.28', confirmation: false, falseDay: false },
-    { date: '2025-04-10', boxColor: 'green', boxSize: '0.65', confirmation: true, falseDay: false },
-    { date: '2025-04-09', boxColor: 'red', boxSize: '-0.18', confirmation: false, falseDay: false },
-    { date: '2025-04-08', boxColor: 'green', boxSize: '0.92', confirmation: true, falseDay: false },
-    { date: '2025-04-07', boxColor: 'red', boxSize: '-0.55', confirmation: true, falseDay: true },
-    { date: '2025-04-06', boxColor: 'equal', boxSize: '0.00', confirmation: false, falseDay: false },
-    { date: '2025-04-05', boxColor: 'red', boxSize: '-0.76', confirmation: true, falseDay: false },
-    { date: '2025-04-04', boxColor: 'green', boxSize: '0.41', confirmation: false, falseDay: false },
-    { date: '2025-04-03', boxColor: 'green', boxSize: '1.25', confirmation: true, falseDay: false },
-    { date: '2025-04-02', boxColor: 'red', boxSize: '-0.38', confirmation: false, falseDay: false },
-    { date: '2025-04-01', boxColor: 'green', boxSize: '0.57', confirmation: true, falseDay: true },
-    { date: '2025-03-31', boxColor: 'red', boxSize: '-1.12', confirmation: true, falseDay: false },
-    { date: '2025-03-30', boxColor: 'green', boxSize: '0.19', confirmation: false, falseDay: false },
-    { date: '2025-03-29', boxColor: 'equal', boxSize: '0.00', confirmation: false, falseDay: false },
-    { date: '2025-03-28', boxColor: 'red', boxSize: '-0.83', confirmation: true, falseDay: false },
-    { date: '2025-03-27', boxColor: 'green', boxSize: '0.72', confirmation: true, falseDay: false },
-    { date: '2025-03-26', boxColor: 'red', boxSize: '-0.29', confirmation: false, falseDay: false },
-    { date: '2025-03-25', boxColor: 'green', boxSize: '1.05', confirmation: true, falseDay: true },
+    { date: '2025-04-13', boxColor: 'green', boxSize: '0.35', drConfirmation: true, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: true, newLow: false },
+    { date: '2025-04-12', boxColor: 'red', boxSize: '-0.42', drConfirmation: true, m7BoxConfirmation: false, beyondM7Box: true, falseDay: true, returnToM7Box: true, newHigh: false, newLow: false },
+    { date: '2025-04-11', boxColor: 'green', boxSize: '0.28', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-10', boxColor: 'green', boxSize: '0.65', drConfirmation: true, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: true, newHigh: true, newLow: false },
+    { date: '2025-04-09', boxColor: 'red', boxSize: '-0.18', drConfirmation: false, m7BoxConfirmation: false, beyondM7Box: true, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-08', boxColor: 'green', boxSize: '0.92', drConfirmation: true, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-07', boxColor: 'red', boxSize: '-0.55', drConfirmation: true, m7BoxConfirmation: false, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: true },
+    { date: '2025-04-06', boxColor: 'equal', boxSize: '0.00', drConfirmation: false, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-05', boxColor: 'red', boxSize: '-0.76', drConfirmation: true, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-04', boxColor: 'green', boxSize: '0.41', drConfirmation: false, m7BoxConfirmation: false, beyondM7Box: true, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-03', boxColor: 'green', boxSize: '1.25', drConfirmation: true, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: true, newHigh: true, newLow: false },
+    { date: '2025-04-02', boxColor: 'red', boxSize: '-0.38', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-01', boxColor: 'green', boxSize: '0.57', drConfirmation: true, m7BoxConfirmation: true, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: false },
+    { date: '2025-03-31', boxColor: 'red', boxSize: '-1.12', drConfirmation: true, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-03-30', boxColor: 'green', boxSize: '0.19', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: true, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-03-29', boxColor: 'equal', boxSize: '0.00', drConfirmation: false, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-03-28', boxColor: 'red', boxSize: '-0.83', drConfirmation: true, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: true, newHigh: false, newLow: true },
+    { date: '2025-03-27', boxColor: 'green', boxSize: '0.72', drConfirmation: true, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-03-26', boxColor: 'red', boxSize: '-0.29', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-03-25', boxColor: 'green', boxSize: '1.05', drConfirmation: true, m7BoxConfirmation: true, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: false },
   ],
   odr: [
-    { date: '2025-04-13', boxColor: 'red', boxSize: '-0.45', confirmation: true, falseDay: false },
-    { date: '2025-04-12', boxColor: 'green', boxSize: '0.22', confirmation: false, falseDay: false },
-    { date: '2025-04-11', boxColor: 'red', boxSize: '-0.63', confirmation: true, falseDay: true },
-    { date: '2025-04-10', boxColor: 'green', boxSize: '0.38', confirmation: false, falseDay: false },
-    { date: '2025-04-09', boxColor: 'green', boxSize: '0.71', confirmation: true, falseDay: false },
-    { date: '2025-04-08', boxColor: 'red', boxSize: '-0.17', confirmation: false, falseDay: false },
-    { date: '2025-04-07', boxColor: 'equal', boxSize: '0.00', confirmation: false, falseDay: false },
-    { date: '2025-04-06', boxColor: 'green', boxSize: '0.89', confirmation: true, falseDay: false },
-    { date: '2025-04-05', boxColor: 'red', boxSize: '-0.52', confirmation: true, falseDay: true },
-    { date: '2025-04-04', boxColor: 'green', boxSize: '0.33', confirmation: false, falseDay: false },
-    { date: '2025-04-03', boxColor: 'red', boxSize: '-0.94', confirmation: true, falseDay: false },
-    { date: '2025-04-02', boxColor: 'green', boxSize: '1.16', confirmation: true, falseDay: true },
-    { date: '2025-04-01', boxColor: 'red', boxSize: '-0.26', confirmation: false, falseDay: false },
-    { date: '2025-03-31', boxColor: 'green', boxSize: '0.47', confirmation: true, falseDay: false },
-    { date: '2025-03-30', boxColor: 'red', boxSize: '-0.75', confirmation: true, falseDay: false },
+    { date: '2025-04-13', boxColor: 'red', boxSize: '-0.45', drConfirmation: true, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: true, newHigh: false, newLow: true },
+    { date: '2025-04-12', boxColor: 'green', boxSize: '0.22', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-11', boxColor: 'red', boxSize: '-0.63', drConfirmation: true, m7BoxConfirmation: true, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: false },
+    // More sample data would normally be here
   ],
   adr: [
-    { date: '2025-04-13', boxColor: 'green', boxSize: '0.53', confirmation: true, falseDay: false },
-    { date: '2025-04-12', boxColor: 'red', boxSize: '-0.68', confirmation: true, falseDay: true },
-    { date: '2025-04-11', boxColor: 'green', boxSize: '0.31', confirmation: false, falseDay: false },
-    { date: '2025-04-10', boxColor: 'equal', boxSize: '0.00', confirmation: false, falseDay: false },
-    { date: '2025-04-09', boxColor: 'red', boxSize: '-0.42', confirmation: false, falseDay: false },
-    { date: '2025-04-08', boxColor: 'green', boxSize: '0.78', confirmation: true, falseDay: false },
-    { date: '2025-04-07', boxColor: 'red', boxSize: '-0.23', confirmation: false, falseDay: false },
-    { date: '2025-04-06', boxColor: 'green', boxSize: '1.32', confirmation: true, falseDay: true },
-    { date: '2025-04-05', boxColor: 'red', boxSize: '-0.57', confirmation: true, falseDay: false },
-    { date: '2025-04-04', boxColor: 'green', boxSize: '0.16', confirmation: false, falseDay: false },
-    { date: '2025-04-03', boxColor: 'red', boxSize: '-0.82', confirmation: true, falseDay: false },
-    { date: '2025-04-02', boxColor: 'green', boxSize: '0.65', confirmation: true, falseDay: false },
+    { date: '2025-04-13', boxColor: 'green', boxSize: '0.53', drConfirmation: true, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    { date: '2025-04-12', boxColor: 'red', boxSize: '-0.68', drConfirmation: true, m7BoxConfirmation: false, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: true },
+    { date: '2025-04-11', boxColor: 'green', boxSize: '0.31', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false },
+    // More sample data would normally be here
   ]
 };
 
@@ -94,27 +75,44 @@ const SESSIONS = {
 const sessionOptions = document.querySelectorAll('.session-option');
 const colorFilter = document.getElementById('color-filter');
 const sizeFilter = document.getElementById('size-filter');
+const confirmationFilter = document.getElementById('confirmation-filter');
+const m7BoxConfirmationFilter = document.getElementById('m7-box-confirmation-filter');
+const beyondM7BoxFilter = document.getElementById('beyond-m7-box-filter');
 const dataTableBody = document.getElementById('data-table-body');
 const recordsCount = document.getElementById('records-count');
 const noDataMessage = document.getElementById('no-data');
 const totalRecordsElement = document.getElementById('total-records');
 const confirmationStatsElement = document.getElementById('confirmation-stats');
 const falseDayStatsElement = document.getElementById('falseday-stats');
+const m7BoxConfirmationStatsElement = document.getElementById('m7-box-confirmation-stats');
+const beyondM7BoxStatsElement = document.getElementById('beyond-m7-box-stats');
 const boxColorHeader = document.getElementById('box-color-header');
 const boxSizeHeader = document.getElementById('box-size-header');
 const confirmationChartTitle = document.getElementById('confirmation-chart-title');
 const falseDayChartTitle = document.getElementById('falseday-chart-title');
+const m7BoxConfirmationChartTitle = document.getElementById('m7-box-confirmation-chart-title');
+const beyondM7BoxChartTitle = document.getElementById('beyond-m7-box-chart-title');
+const returnToM7BoxChartTitle = document.getElementById('return-to-m7-box-chart-title');
 const confirmationDetails = document.getElementById('confirmation-details');
 const falseDayDetails = document.getElementById('falseday-details');
+const m7BoxConfirmationDetails = document.getElementById('m7-box-confirmation-details');
+const beyondM7BoxDetails = document.getElementById('beyond-m7-box-details');
+const returnToM7BoxDetails = document.getElementById('return-to-m7-box-details');
 
 // Charts
 let confirmationChart;
 let falseDayChart;
+let m7BoxConfirmationChart;
+let beyondM7BoxChart;
+let returnToM7BoxChart;
 
 // State
 let currentSession = 'rdr';
 let currentColorFilter = '';
 let currentSizeFilter = null;
+let currentConfirmationFilter = '';
+let currentM7BoxConfirmationFilter = '';
+let currentBeyondM7BoxFilter = '';
 let filteredData = [];
 
 // Initialize the dashboard
@@ -135,6 +133,21 @@ function initializeDashboard() {
   sizeFilter.addEventListener('change', function() {
     const rangeIndex = parseInt(this.value);
     currentSizeFilter = rangeIndex >= 0 ? SIZE_RANGES[rangeIndex].value : null;
+    updateDashboard();
+  });
+  
+  confirmationFilter.addEventListener('change', function() {
+    currentConfirmationFilter = this.value;
+    updateDashboard();
+  });
+  
+  m7BoxConfirmationFilter.addEventListener('change', function() {
+    currentM7BoxConfirmationFilter = this.value;
+    updateDashboard();
+  });
+  
+  beyondM7BoxFilter.addEventListener('change', function() {
+    currentBeyondM7BoxFilter = this.value;
     updateDashboard();
   });
 
@@ -167,12 +180,21 @@ function setActiveSession(session) {
   // Update chart titles
   confirmationChartTitle.textContent = `Confirmation Probability by M7 Box Color - ${SESSIONS[session].name}`;
   falseDayChartTitle.textContent = `False Day Probability After Confirmation - ${SESSIONS[session].name}`;
+  m7BoxConfirmationChartTitle.textContent = `M7 Box Confirmation Probability - ${SESSIONS[session].name}`;
+  beyondM7BoxChartTitle.textContent = `Beyond M7 Box Probability - ${SESSIONS[session].name}`;
+  returnToM7BoxChartTitle.textContent = `Probabilities After Return to M7 Box - ${SESSIONS[session].name}`;
 
   // Reset filters
   colorFilter.value = '';
   sizeFilter.value = '-1';
+  confirmationFilter.value = '';
+  m7BoxConfirmationFilter.value = '';
+  beyondM7BoxFilter.value = '';
   currentColorFilter = '';
   currentSizeFilter = null;
+  currentConfirmationFilter = '';
+  currentM7BoxConfirmationFilter = '';
+  currentBeyondM7BoxFilter = '';
 
   // Update dashboard with new session data
   updateDashboard();
@@ -193,6 +215,27 @@ function filterData() {
       const size = parseFloat(item.boxSize);
       return size >= currentSizeFilter[0] && size <= currentSizeFilter[1];
     });
+  }
+  
+  // Apply DR confirmation filter
+  if (currentConfirmationFilter === 'yes') {
+    data = data.filter(item => item.drConfirmation);
+  } else if (currentConfirmationFilter === 'no') {
+    data = data.filter(item => !item.drConfirmation);
+  }
+  
+  // Apply M7 Box confirmation filter
+  if (currentM7BoxConfirmationFilter === 'yes') {
+    data = data.filter(item => item.m7BoxConfirmation);
+  } else if (currentM7BoxConfirmationFilter === 'no') {
+    data = data.filter(item => !item.m7BoxConfirmation);
+  }
+  
+  // Apply Beyond M7 Box filter
+  if (currentBeyondM7BoxFilter === 'yes') {
+    data = data.filter(item => item.beyondM7Box);
+  } else if (currentBeyondM7BoxFilter === 'no') {
+    data = data.filter(item => !item.beyondM7Box);
   }
   
   return data;
@@ -228,26 +271,51 @@ function updateDataTable() {
     filteredData.forEach(item => {
       const row = document.createElement('tr');
       
+      // Date
       const dateCell = document.createElement('td');
       dateCell.textContent = item.date;
       row.appendChild(dateCell);
       
+      // Box Color
       const colorCell = document.createElement('td');
       colorCell.textContent = item.boxColor;
       colorCell.className = item.boxColor;
       row.appendChild(colorCell);
       
+      // Box Size
       const sizeCell = document.createElement('td');
       sizeCell.textContent = item.boxSize;
       row.appendChild(sizeCell);
       
+      // DR Confirmation
       const confirmationCell = document.createElement('td');
-      confirmationCell.textContent = item.confirmation ? 'Yes' : 'No';
+      confirmationCell.textContent = item.drConfirmation ? 'Yes' : 'No';
+      confirmationCell.className = item.drConfirmation ? 'yes' : 'no';
       row.appendChild(confirmationCell);
       
+      // M7 Box Confirmation
+      const m7BoxConfirmationCell = document.createElement('td');
+      m7BoxConfirmationCell.textContent = item.m7BoxConfirmation ? 'Yes' : 'No';
+      m7BoxConfirmationCell.className = item.m7BoxConfirmation ? 'yes' : 'no';
+      row.appendChild(m7BoxConfirmationCell);
+      
+      // Beyond M7 Box
+      const beyondM7BoxCell = document.createElement('td');
+      beyondM7BoxCell.textContent = item.beyondM7Box ? 'Yes' : 'No';
+      beyondM7BoxCell.className = item.beyondM7Box ? 'yes' : 'no';
+      row.appendChild(beyondM7BoxCell);
+      
+      // False Day
       const falseDayCell = document.createElement('td');
       falseDayCell.textContent = item.falseDay ? 'Yes' : 'No';
+      falseDayCell.className = item.falseDay ? 'yes' : 'no';
       row.appendChild(falseDayCell);
+      
+      // Return to M7 Box
+      const returnToM7BoxCell = document.createElement('td');
+      returnToM7BoxCell.textContent = item.returnToM7Box ? 'Yes' : 'No';
+      returnToM7BoxCell.className = item.returnToM7Box ? 'yes' : 'no';
+      row.appendChild(returnToM7BoxCell);
       
       dataTableBody.appendChild(row);
     });
@@ -260,15 +328,21 @@ function updateDataTable() {
 // Update statistics
 function updateStatistics() {
   const totalCount = filteredData.length;
-  const confirmationsCount = filteredData.filter(item => item.confirmation).length;
+  const confirmationsCount = filteredData.filter(item => item.drConfirmation).length;
   const falseDaysCount = filteredData.filter(item => item.falseDay).length;
+  const m7BoxConfirmationsCount = filteredData.filter(item => item.m7BoxConfirmation).length;
+  const beyondM7BoxCount = filteredData.filter(item => item.beyondM7Box).length;
   
   const confirmationPct = totalCount ? (confirmationsCount / totalCount * 100).toFixed(2) : 0;
   const falseDayPct = confirmationsCount ? (falseDaysCount / confirmationsCount * 100).toFixed(2) : 0;
+  const m7BoxConfirmationPct = totalCount ? (m7BoxConfirmationsCount / totalCount * 100).toFixed(2) : 0;
+  const beyondM7BoxPct = totalCount ? (beyondM7BoxCount / totalCount * 100).toFixed(2) : 0;
   
   totalRecordsElement.textContent = totalCount;
   confirmationStatsElement.textContent = `${confirmationsCount} (${confirmationPct}%)`;
   falseDayStatsElement.textContent = `${falseDaysCount} (${falseDayPct}%)`;
+  m7BoxConfirmationStatsElement.textContent = `${m7BoxConfirmationsCount} (${m7BoxConfirmationPct}%)`;
+  beyondM7BoxStatsElement.textContent = `${beyondM7BoxCount} (${beyondM7BoxPct}%)`;
 }
 
 // Initialize the charts
@@ -280,7 +354,7 @@ function initializeCharts() {
     data: {
       labels: ['Green', 'Red', 'Equal'],
       datasets: [{
-        label: 'Confirmation Probability (%)',
+        label: 'DR Confirmation Probability (%)',
         data: [0, 0, 0],
         backgroundColor: [
           'rgba(75, 192, 192, 0.6)',
@@ -348,6 +422,120 @@ function initializeCharts() {
       }
     }
   });
+  
+  // M7 Box confirmation probability chart
+  const m7BoxConfirmationCtx = document.getElementById('m7BoxConfirmationChart').getContext('2d');
+  m7BoxConfirmationChart = new Chart(m7BoxConfirmationCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Green', 'Red', 'Equal'],
+      datasets: [{
+        label: 'M7 Box Confirmation Probability (%)',
+        data: [0, 0, 0],
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)'
+        ],
+        borderColor: [
+          'rgba(75, 192, 192, 1)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          title: {
+            display: true,
+            text: 'Probability (%)'
+          }
+        }
+      }
+    }
+  });
+  
+  // Beyond M7 Box probability chart
+  const beyondM7BoxCtx = document.getElementById('beyondM7BoxChart').getContext('2d');
+  beyondM7BoxChart = new Chart(beyondM7BoxCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Green', 'Red', 'Equal'],
+      datasets: [{
+        label: 'Beyond M7 Box Probability (%)',
+        data: [0, 0, 0],
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)'
+        ],
+        borderColor: [
+          'rgba(75, 192, 192, 1)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          title: {
+            display: true,
+            text: 'Probability (%)'
+          }
+        }
+      }
+    }
+  });
+  
+  // Return to M7 Box probabilities chart
+  const returnToM7BoxCtx = document.getElementById('returnToM7BoxChart').getContext('2d');
+  returnToM7BoxChart = new Chart(returnToM7BoxCtx, {
+    type: 'bar',
+    data: {
+      labels: ['False Day', 'New High (Long)', 'New Low (Short)'],
+      datasets: [{
+        label: 'Probability After Return to M7 Box (%)',
+        data: [0, 0, 0],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(255, 159, 64, 0.6)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          title: {
+            display: true,
+            text: 'Probability (%)'
+          }
+        }
+      }
+    }
+  });
 }
 
 // Update charts with current data
@@ -387,6 +575,60 @@ function updateCharts() {
     <p><strong>Red M7 Box:</strong> ${falseDayData.red.probability}% false day rate (${falseDayData.red.count}/${falseDayData.red.total})</p>
     <p><strong>Equal M7 Box:</strong> ${falseDayData.equal.probability}% false day rate (${falseDayData.equal.count}/${falseDayData.equal.total})</p>
   `;
+  
+  // Calculate M7 Box confirmation probabilities
+  const m7BoxConfirmationData = calculateM7BoxConfirmationByColor();
+  
+  // Update M7 Box confirmation chart
+  m7BoxConfirmationChart.data.datasets[0].data = [
+    m7BoxConfirmationData.green.probability,
+    m7BoxConfirmationData.red.probability,
+    m7BoxConfirmationData.equal.probability
+  ];
+  m7BoxConfirmationChart.update();
+  
+  // Update M7 Box confirmation details
+  m7BoxConfirmationDetails.innerHTML = `
+    <p><strong>Green M7 Box:</strong> ${m7BoxConfirmationData.green.probability}% M7 Box confirmation rate (${m7BoxConfirmationData.green.count}/${m7BoxConfirmationData.green.total})</p>
+    <p><strong>Red M7 Box:</strong> ${m7BoxConfirmationData.red.probability}% M7 Box confirmation rate (${m7BoxConfirmationData.red.count}/${m7BoxConfirmationData.red.total})</p>
+    <p><strong>Equal M7 Box:</strong> ${m7BoxConfirmationData.equal.probability}% M7 Box confirmation rate (${m7BoxConfirmationData.equal.count}/${m7BoxConfirmationData.equal.total})</p>
+  `;
+  
+  // Calculate Beyond M7 Box probabilities
+  const beyondM7BoxData = calculateBeyondM7BoxByColor();
+  
+  // Update Beyond M7 Box chart
+  beyondM7BoxChart.data.datasets[0].data = [
+    beyondM7BoxData.green.probability,
+    beyondM7BoxData.red.probability,
+    beyondM7BoxData.equal.probability
+  ];
+  beyondM7BoxChart.update();
+  
+  // Update Beyond M7 Box details
+  beyondM7BoxDetails.innerHTML = `
+    <p><strong>Green M7 Box:</strong> ${beyondM7BoxData.green.probability}% beyond M7 Box rate (${beyondM7BoxData.green.count}/${beyondM7BoxData.green.total})</p>
+    <p><strong>Red M7 Box:</strong> ${beyondM7BoxData.red.probability}% beyond M7 Box rate (${beyondM7BoxData.red.count}/${beyondM7BoxData.red.total})</p>
+    <p><strong>Equal M7 Box:</strong> ${beyondM7BoxData.equal.probability}% beyond M7 Box rate (${beyondM7BoxData.equal.count}/${beyondM7BoxData.equal.total})</p>
+  `;
+  
+  // Calculate Return to M7 Box probabilities
+  const returnToM7BoxData = calculateReturnToM7BoxProbabilities();
+  
+  // Update Return to M7 Box chart
+  returnToM7BoxChart.data.datasets[0].data = [
+    returnToM7BoxData.falseDay.probability,
+    returnToM7BoxData.newHigh.probability,
+    returnToM7BoxData.newLow.probability
+  ];
+  returnToM7BoxChart.update();
+  
+  // Update Return to M7 Box details
+  returnToM7BoxDetails.innerHTML = `
+    <p><strong>False Day Probability:</strong> ${returnToM7BoxData.falseDay.probability}% (${returnToM7BoxData.falseDay.count}/${returnToM7BoxData.total})</p>
+    <p><strong>New High Probability (Long):</strong> ${returnToM7BoxData.newHigh.probability}% (${returnToM7BoxData.newHigh.count}/${returnToM7BoxData.total})</p>
+    <p><strong>New Low Probability (Short):</strong> ${returnToM7BoxData.newLow.probability}% (${returnToM7BoxData.newLow.count}/${returnToM7BoxData.total})</p>
+  `;
 }
 
 // Calculate confirmation probabilities by M7 Box color
@@ -397,21 +639,19 @@ function calculateConfirmationByColor() {
     equal: { total: 0, count: 0, probability: 0 }
   };
   
-  // Count total items and confirmations by color
   filteredData.forEach(item => {
     if (item.boxColor === 'green') {
       result.green.total++;
-      if (item.confirmation) result.green.count++;
+      if (item.drConfirmation) result.green.count++;
     } else if (item.boxColor === 'red') {
       result.red.total++;
-      if (item.confirmation) result.red.count++;
+      if (item.drConfirmation) result.red.count++;
     } else if (item.boxColor === 'equal') {
       result.equal.total++;
-      if (item.confirmation) result.equal.count++;
+      if (item.drConfirmation) result.equal.count++;
     }
   });
   
-  // Calculate probabilities
   result.green.probability = result.green.total ? parseFloat((result.green.count / result.green.total * 100).toFixed(2)) : 0;
   result.red.probability = result.red.total ? parseFloat((result.red.count / result.red.total * 100).toFixed(2)) : 0;
   result.equal.probability = result.equal.total ? parseFloat((result.equal.count / result.equal.total * 100).toFixed(2)) : 0;
@@ -427,9 +667,8 @@ function calculateFalseDayProbability() {
     equal: { total: 0, count: 0, probability: 0 }
   };
   
-  // Count confirmations and false days by color
   filteredData.forEach(item => {
-    if (!item.confirmation) return;
+    if (!item.drConfirmation) return;
     
     if (item.boxColor === 'green') {
       result.green.total++;
@@ -443,7 +682,6 @@ function calculateFalseDayProbability() {
     }
   });
   
-  // Calculate probabilities
   result.green.probability = result.green.total ? parseFloat((result.green.count / result.green.total * 100).toFixed(2)) : 0;
   result.red.probability = result.red.total ? parseFloat((result.red.count / result.red.total * 100).toFixed(2)) : 0;
   result.equal.probability = result.equal.total ? parseFloat((result.equal.count / result.equal.total * 100).toFixed(2)) : 0;
@@ -451,5 +689,87 @@ function calculateFalseDayProbability() {
   return result;
 }
 
-// Initialize the dashboard when the document is loaded
+// Calculate M7 Box confirmation probabilities by M7 Box color
+function calculateM7BoxConfirmationByColor() {
+  const result = {
+    green: { total: 0, count: 0, probability: 0 },
+    red: { total: 0, count: 0, probability: 0 },
+    equal: { total: 0, count: 0, probability: 0 }
+  };
+  
+  filteredData.forEach(item => {
+    if (item.boxColor === 'green') {
+      result.green.total++;
+      if (item.m7BoxConfirmation) result.green.count++;
+    } else if (item.boxColor === 'red') {
+      result.red.total++;
+      if (item.m7BoxConfirmation) result.red.count++;
+    } else if (item.boxColor === 'equal') {
+      result.equal.total++;
+      if (item.m7BoxConfirmation) result.equal.count++;
+    }
+  });
+  
+  result.green.probability = result.green.total ? parseFloat((result.green.count / result.green.total * 100).toFixed(2)) : 0;
+  result.red.probability = result.red.total ? parseFloat((result.red.count / result.red.total * 100).toFixed(2)) : 0;
+  result.equal.probability = result.equal.total ? parseFloat((result.equal.count / result.equal.total * 100).toFixed(2)) : 0;
+  
+  return result;
+}
+
+// Calculate Beyond M7 Box probabilities by M7 Box color
+function calculateBeyondM7BoxByColor() {
+  const result = {
+    green: { total: 0, count: 0, probability: 0 },
+    red: { total: 0, count: 0, probability: 0 },
+    equal: { total: 0, count: 0, probability: 0 }
+  };
+  
+  filteredData.forEach(item => {
+    if (item.boxColor === 'green') {
+      result.green.total++;
+      if (item.beyondM7Box) result.green.count++;
+    } else if (item.boxColor === 'red') {
+      result.red.total++;
+      if (item.beyondM7Box) result.red.count++;
+    } else if (item.boxColor === 'equal') {
+      result.equal.total++;
+      if (item.beyondM7Box) result.equal.count++;
+    }
+  });
+  
+  result.green.probability = result.green.total ? parseFloat((result.green.count / result.green.total * 100).toFixed(2)) : 0;
+  result.red.probability = result.red.total ? parseFloat((result.red.count / result.red.total * 100).toFixed(2)) : 0;
+  result.equal.probability = result.equal.total ? parseFloat((result.equal.count / result.equal.total * 100).toFixed(2)) : 0;
+  
+  return result;
+}
+
+// Calculate probabilities after returning to M7 Box
+function calculateReturnToM7BoxProbabilities() {
+  const result = {
+    total: 0,
+    falseDay: { count: 0, probability: 0 },
+    newHigh: { count: 0, probability: 0 },
+    newLow: { count: 0, probability: 0 }
+  };
+  
+  // Filter to include only days where price returned to M7 Box
+  const returnToM7BoxDays = filteredData.filter(item => item.returnToM7Box);
+  result.total = returnToM7BoxDays.length;
+  
+  returnToM7BoxDays.forEach(item => {
+    if (item.falseDay) result.falseDay.count++;
+    if (item.newHigh) result.newHigh.count++;
+    if (item.newLow) result.newLow.count++;
+  });
+  
+  result.falseDay.probability = result.total ? parseFloat((result.falseDay.count / result.total * 100).toFixed(2)) : 0;
+  result.newHigh.probability = result.total ? parseFloat((result.newHigh.count / result.total * 100).toFixed(2)) : 0;
+  result.newLow.probability = result.total ? parseFloat((result.newLow.count / result.total * 100).toFixed(2)) : 0;
+  
+  return result;
+}
+
+// Initialize dashboard when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initializeDashboard);
