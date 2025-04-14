@@ -234,4 +234,222 @@ function updateDataTable() {
       
       const colorCell = document.createElement('td');
       colorCell.textContent = item.boxColor;
-      colorCell.className = item
+      colorCell.className = item.boxColor;
+      row.appendChild(colorCell);
+      
+      const sizeCell = document.createElement('td');
+      sizeCell.textContent = item.boxSize;
+      row.appendChild(sizeCell);
+      
+      const confirmationCell = document.createElement('td');
+      confirmationCell.textContent = item.confirmation ? 'Yes' : 'No';
+      row.appendChild(confirmationCell);
+      
+      const falseDayCell = document.createElement('td');
+      falseDayCell.textContent = item.falseDay ? 'Yes' : 'No';
+      row.appendChild(falseDayCell);
+      
+      dataTableBody.appendChild(row);
+    });
+  }
+  
+  // Update record count
+  recordsCount.textContent = filteredData.length;
+}
+
+// Update statistics
+function updateStatistics() {
+  const totalCount = filteredData.length;
+  const confirmationsCount = filteredData.filter(item => item.confirmation).length;
+  const falseDaysCount = filteredData.filter(item => item.falseDay).length;
+  
+  const confirmationPct = totalCount ? (confirmationsCount / totalCount * 100).toFixed(2) : 0;
+  const falseDayPct = confirmationsCount ? (falseDaysCount / confirmationsCount * 100).toFixed(2) : 0;
+  
+  totalRecordsElement.textContent = totalCount;
+  confirmationStatsElement.textContent = `${confirmationsCount} (${confirmationPct}%)`;
+  falseDayStatsElement.textContent = `${falseDaysCount} (${falseDayPct}%)`;
+}
+
+// Initialize the charts
+function initializeCharts() {
+  // Confirmation probability chart
+  const confirmationCtx = document.getElementById('confirmationChart').getContext('2d');
+  confirmationChart = new Chart(confirmationCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Green', 'Red', 'Equal'],
+      datasets: [{
+        label: 'Confirmation Probability (%)',
+        data: [0, 0, 0],
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)'
+        ],
+        borderColor: [
+          'rgba(75, 192, 192, 1)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          title: {
+            display: true,
+            text: 'Probability (%)'
+          }
+        }
+      }
+    }
+  });
+  
+  // False day probability chart
+  const falseDayCtx = document.getElementById('falseDayChart').getContext('2d');
+  falseDayChart = new Chart(falseDayCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Green', 'Red', 'Equal'],
+      datasets: [{
+        label: 'False Day Probability (%)',
+        data: [0, 0, 0],
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)'
+        ],
+        borderColor: [
+          'rgba(75, 192, 192, 1)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          title: {
+            display: true,
+            text: 'Probability (%)'
+          }
+        }
+      }
+    }
+  });
+}
+
+// Update charts with current data
+function updateCharts() {
+  // Calculate confirmation probabilities by M7 Box color
+  const confirmationData = calculateConfirmationByColor();
+  
+  // Update confirmation chart
+  confirmationChart.data.datasets[0].data = [
+    confirmationData.green.probability,
+    confirmationData.red.probability,
+    confirmationData.equal.probability
+  ];
+  confirmationChart.update();
+  
+  // Update confirmation details
+  confirmationDetails.innerHTML = `
+    <p><strong>Green M7 Box:</strong> ${confirmationData.green.probability}% confirmation rate (${confirmationData.green.count}/${confirmationData.green.total})</p>
+    <p><strong>Red M7 Box:</strong> ${confirmationData.red.probability}% confirmation rate (${confirmationData.red.count}/${confirmationData.red.total})</p>
+    <p><strong>Equal M7 Box:</strong> ${confirmationData.equal.probability}% confirmation rate (${confirmationData.equal.count}/${confirmationData.equal.total})</p>
+  `;
+  
+  // Calculate false day probabilities
+  const falseDayData = calculateFalseDayProbability();
+  
+  // Update false day chart
+  falseDayChart.data.datasets[0].data = [
+    falseDayData.green.probability,
+    falseDayData.red.probability,
+    falseDayData.equal.probability
+  ];
+  falseDayChart.update();
+  
+  // Update false day details
+  falseDayDetails.innerHTML = `
+    <p><strong>Green M7 Box:</strong> ${falseDayData.green.probability}% false day rate (${falseDayData.green.count}/${falseDayData.green.total})</p>
+    <p><strong>Red M7 Box:</strong> ${falseDayData.red.probability}% false day rate (${falseDayData.red.count}/${falseDayData.red.total})</p>
+    <p><strong>Equal M7 Box:</strong> ${falseDayData.equal.probability}% false day rate (${falseDayData.equal.count}/${falseDayData.equal.total})</p>
+  `;
+}
+
+// Calculate confirmation probabilities by M7 Box color
+function calculateConfirmationByColor() {
+  const result = {
+    green: { total: 0, count: 0, probability: 0 },
+    red: { total: 0, count: 0, probability: 0 },
+    equal: { total: 0, count: 0, probability: 0 }
+  };
+  
+  // Count total items and confirmations by color
+  filteredData.forEach(item => {
+    if (item.boxColor === 'green') {
+      result.green.total++;
+      if (item.confirmation) result.green.count++;
+    } else if (item.boxColor === 'red') {
+      result.red.total++;
+      if (item.confirmation) result.red.count++;
+    } else if (item.boxColor === 'equal') {
+      result.equal.total++;
+      if (item.confirmation) result.equal.count++;
+    }
+  });
+  
+  // Calculate probabilities
+  result.green.probability = result.green.total ? parseFloat((result.green.count / result.green.total * 100).toFixed(2)) : 0;
+  result.red.probability = result.red.total ? parseFloat((result.red.count / result.red.total * 100).toFixed(2)) : 0;
+  result.equal.probability = result.equal.total ? parseFloat((result.equal.count / result.equal.total * 100).toFixed(2)) : 0;
+  
+  return result;
+}
+
+// Calculate false day probabilities after confirmation
+function calculateFalseDayProbability() {
+  const result = {
+    green: { total: 0, count: 0, probability: 0 },
+    red: { total: 0, count: 0, probability: 0 },
+    equal: { total: 0, count: 0, probability: 0 }
+  };
+  
+  // Count confirmations and false days by color
+  filteredData.forEach(item => {
+    if (!item.confirmation) return;
+    
+    if (item.boxColor === 'green') {
+      result.green.total++;
+      if (item.falseDay) result.green.count++;
+    } else if (item.boxColor === 'red') {
+      result.red.total++;
+      if (item.falseDay) result.red.count++;
+    } else if (item.boxColor === 'equal') {
+      result.equal.total++;
+      if (item.falseDay) result.equal.count++;
+    }
+  });
+  
+  // Calculate probabilities
+  result.green.probability = result.green.total ? parseFloat((result.green.count / result.green.total * 100).toFixed(2)) : 0;
+  result.red.probability = result.red.total ? parseFloat((result.red.count / result.red.total * 100).toFixed(2)) : 0;
+  result.equal.probability = result.equal.total ? parseFloat((result.equal.count / result.equal.total * 100).toFixed(2)) : 0;
+  
+  return result;
+}
+
+// Initialize the dashboard when the document is loaded
+document.addEventListener('DOMContentLoaded', initializeDashboard);
