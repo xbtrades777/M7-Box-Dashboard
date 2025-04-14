@@ -91,8 +91,8 @@
                 <label>DR Confirmation:</label>
                 <select id="confirmation-filter">
                     <option value="">All</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="long">Long</option>
+                    <option value="short">Short</option>
                 </select>
             </div>
 
@@ -111,6 +111,15 @@
                     <option value="">All</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>M7 Box Retracement:</label>
+                <select id="m7-box-retracement-filter">
+                    <option value="">All</option>
+                    <option value="before">Before Session Confirmation</option>
+                    <option value="after">After Session Confirmation</option>
                 </select>
             </div>
         </div>
@@ -227,6 +236,7 @@
                         <th>Beyond M7 Box</th>
                         <th>False Day</th>
                         <th>Return to M7 Box</th>
+                        <th>M7 Box Retracement</th>
                     </tr>
                 </thead>
                 <tbody id="data-table-body">
