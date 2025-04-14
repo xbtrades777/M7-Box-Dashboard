@@ -1,37 +1,37 @@
 // Sample data for the M7 Box Dashboard with additional fields
 const sampleData = {
   rdr: [
-    { date: '2025-04-13', boxColor: 'green', boxSize: '0.35', drConfirmation: 'long', m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: true, newLow: false, m7BoxRetracement: null },
-    { date: '2025-04-12', boxColor: 'red', boxSize: '-0.42', drConfirmation: 'short', m7BoxConfirmation: false, beyondM7Box: true, falseDay: true, returnToM7Box: true, newHigh: false, newLow: false, m7BoxRetracement: 'after' },
-    { date: '2025-04-11', boxColor: 'green', boxSize: '0.28', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-04-10', boxColor: 'green', boxSize: '0.65', drConfirmation: 'long', m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: true, newHigh: true, newLow: false, m7BoxRetracement: 'before' },
-    { date: '2025-04-09', boxColor: 'red', boxSize: '-0.18', drConfirmation: false, m7BoxConfirmation: false, beyondM7Box: true, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-04-08', boxColor: 'green', boxSize: '0.92', drConfirmation: 'long', m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-04-07', boxColor: 'red', boxSize: '-0.55', drConfirmation: 'short', m7BoxConfirmation: false, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: true, m7BoxRetracement: 'after' },
-    { date: '2025-04-06', boxColor: 'equal', boxSize: '0.00', drConfirmation: false, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-04-05', boxColor: 'red', boxSize: '-0.76', drConfirmation: 'short', m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-04-04', boxColor: 'green', boxSize: '0.41', drConfirmation: false, m7BoxConfirmation: false, beyondM7Box: true, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
-    { date: '2025-04-03', boxColor: 'green', boxSize: '1.25', drConfirmation: 'long', m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: true, newHigh: true, newLow: false, m7BoxRetracement: 'after' },
-    { date: '2025-04-02', boxColor: 'red', boxSize: '-0.38', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-04-01', boxColor: 'green', boxSize: '0.57', drConfirmation: 'long', m7BoxConfirmation: true, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
-    { date: '2025-03-31', boxColor: 'red', boxSize: '-1.12', drConfirmation: 'short', m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-03-30', boxColor: 'green', boxSize: '0.19', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: true, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
-    { date: '2025-03-29', boxColor: 'equal', boxSize: '0.00', drConfirmation: false, m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-03-28', boxColor: 'red', boxSize: '-0.83', drConfirmation: 'short', m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: true, newHigh: false, newLow: true, m7BoxRetracement: 'after' },
-    { date: '2025-03-27', boxColor: 'green', boxSize: '0.72', drConfirmation: 'long', m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-03-26', boxColor: 'red', boxSize: '-0.29', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
-    { date: '2025-03-25', boxColor: 'green', boxSize: '1.05', drConfirmation: 'long', m7BoxConfirmation: true, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: false, m7BoxRetracement: 'after' },
+    { date: '2025-04-13', boxColor: 'green', boxSize: '0.35', drConfirmation: 'long', m7BoxConfirmation: false, m7BoxRetracementLevel: 'above', falseDay: false, returnToM7Box: false, newHigh: true, newLow: false, m7BoxRetracement: null },
+    { date: '2025-04-12', boxColor: 'red', boxSize: '-0.42', drConfirmation: 'short', m7BoxConfirmation: false, m7BoxRetracementLevel: 'below', falseDay: true, returnToM7Box: true, newHigh: false, newLow: false, m7BoxRetracement: 'after' },
+    { date: '2025-04-11', boxColor: 'green', boxSize: '0.28', drConfirmation: false, m7BoxConfirmation: true, m7BoxRetracementLevel: 'inside', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-04-10', boxColor: 'green', boxSize: '0.65', drConfirmation: 'long', m7BoxConfirmation: true, m7BoxRetracementLevel: 'above', falseDay: false, returnToM7Box: true, newHigh: true, newLow: false, m7BoxRetracement: 'before' },
+    { date: '2025-04-09', boxColor: 'red', boxSize: '-0.18', drConfirmation: false, m7BoxConfirmation: false, m7BoxRetracementLevel: 'below', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-04-08', boxColor: 'green', boxSize: '0.92', drConfirmation: 'long', m7BoxConfirmation: true, m7BoxRetracementLevel: 'above', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-04-07', boxColor: 'red', boxSize: '-0.55', drConfirmation: 'short', m7BoxConfirmation: false, m7BoxRetracementLevel: 'below', falseDay: true, returnToM7Box: true, newHigh: false, newLow: true, m7BoxRetracement: 'after' },
+    { date: '2025-04-06', boxColor: 'equal', boxSize: '0.00', drConfirmation: false, m7BoxConfirmation: false, m7BoxRetracementLevel: 'inside', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-04-05', boxColor: 'red', boxSize: '-0.76', drConfirmation: 'short', m7BoxConfirmation: true, m7BoxRetracementLevel: 'below', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-04-04', boxColor: 'green', boxSize: '0.41', drConfirmation: false, m7BoxConfirmation: false, m7BoxRetracementLevel: 'inside', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
+    { date: '2025-04-03', boxColor: 'green', boxSize: '1.25', drConfirmation: 'long', m7BoxConfirmation: false, m7BoxRetracementLevel: 'above', falseDay: false, returnToM7Box: true, newHigh: true, newLow: false, m7BoxRetracement: 'after' },
+    { date: '2025-04-02', boxColor: 'red', boxSize: '-0.38', drConfirmation: false, m7BoxConfirmation: true, m7BoxRetracementLevel: 'inside', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-04-01', boxColor: 'green', boxSize: '0.57', drConfirmation: 'long', m7BoxConfirmation: true, m7BoxRetracementLevel: 'above', falseDay: true, returnToM7Box: true, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
+    { date: '2025-03-31', boxColor: 'red', boxSize: '-1.12', drConfirmation: 'short', m7BoxConfirmation: false, m7BoxRetracementLevel: 'below', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-03-30', boxColor: 'green', boxSize: '0.19', drConfirmation: false, m7BoxConfirmation: true, m7BoxRetracementLevel: 'inside', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
+    { date: '2025-03-29', boxColor: 'equal', boxSize: '0.00', drConfirmation: false, m7BoxConfirmation: false, m7BoxRetracementLevel: null, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-03-28', boxColor: 'red', boxSize: '-0.83', drConfirmation: 'short', m7BoxConfirmation: true, m7BoxRetracementLevel: 'below', falseDay: false, returnToM7Box: true, newHigh: false, newLow: true, m7BoxRetracement: 'after' },
+    { date: '2025-03-27', boxColor: 'green', boxSize: '0.72', drConfirmation: 'long', m7BoxConfirmation: false, m7BoxRetracementLevel: 'above', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-03-26', boxColor: 'red', boxSize: '-0.29', drConfirmation: false, m7BoxConfirmation: true, m7BoxRetracementLevel: 'inside', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
+    { date: '2025-03-25', boxColor: 'green', boxSize: '1.05', drConfirmation: 'long', m7BoxConfirmation: true, m7BoxRetracementLevel: 'above', falseDay: true, returnToM7Box: true, newHigh: false, newLow: false, m7BoxRetracement: 'after' },
   ],
   odr: [
-    { date: '2025-04-13', boxColor: 'red', boxSize: '-0.45', drConfirmation: 'short', m7BoxConfirmation: false, beyondM7Box: false, falseDay: false, returnToM7Box: true, newHigh: false, newLow: true, m7BoxRetracement: 'after' },
-    { date: '2025-04-12', boxColor: 'green', boxSize: '0.22', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
-    { date: '2025-04-11', boxColor: 'red', boxSize: '-0.63', drConfirmation: 'short', m7BoxConfirmation: true, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: false, m7BoxRetracement: 'after' },
+    { date: '2025-04-13', boxColor: 'red', boxSize: '-0.45', drConfirmation: 'short', m7BoxConfirmation: false, m7BoxRetracementLevel: 'below', falseDay: false, returnToM7Box: true, newHigh: false, newLow: true, m7BoxRetracement: 'after' },
+    { date: '2025-04-12', boxColor: 'green', boxSize: '0.22', drConfirmation: false, m7BoxConfirmation: true, m7BoxRetracementLevel: 'inside', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
+    { date: '2025-04-11', boxColor: 'red', boxSize: '-0.63', drConfirmation: 'short', m7BoxConfirmation: true, m7BoxRetracementLevel: 'below', falseDay: true, returnToM7Box: true, newHigh: false, newLow: false, m7BoxRetracement: 'after' },
     // More sample data would normally be here
   ],
   adr: [
-    { date: '2025-04-13', boxColor: 'green', boxSize: '0.53', drConfirmation: 'long', m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
-    { date: '2025-04-12', boxColor: 'red', boxSize: '-0.68', drConfirmation: 'short', m7BoxConfirmation: false, beyondM7Box: false, falseDay: true, returnToM7Box: true, newHigh: false, newLow: true, m7BoxRetracement: 'after' },
-    { date: '2025-04-11', boxColor: 'green', boxSize: '0.31', drConfirmation: false, m7BoxConfirmation: true, beyondM7Box: false, falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
+    { date: '2025-04-13', boxColor: 'green', boxSize: '0.53', drConfirmation: 'long', m7BoxConfirmation: true, m7BoxRetracementLevel: 'above', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: null },
+    { date: '2025-04-12', boxColor: 'red', boxSize: '-0.68', drConfirmation: 'short', m7BoxConfirmation: false, m7BoxRetracementLevel: 'below', falseDay: true, returnToM7Box: true, newHigh: false, newLow: true, m7BoxRetracement: 'after' },
+    { date: '2025-04-11', boxColor: 'green', boxSize: '0.31', drConfirmation: false, m7BoxConfirmation: true, m7BoxRetracementLevel: 'inside', falseDay: false, returnToM7Box: false, newHigh: false, newLow: false, m7BoxRetracement: 'before' },
     // More sample data would normally be here
   ]
 };
@@ -77,7 +77,7 @@ const colorFilter = document.getElementById('color-filter');
 const sizeFilter = document.getElementById('size-filter');
 const confirmationFilter = document.getElementById('confirmation-filter');
 const m7BoxConfirmationFilter = document.getElementById('m7-box-confirmation-filter');
-const beyondM7BoxFilter = document.getElementById('beyond-m7-box-filter');
+const m7BoxRetracementLevelFilter = document.getElementById('m7-box-retracement-level-filter');
 const m7BoxRetracementFilter = document.getElementById('m7-box-retracement-filter');
 const dataTableBody = document.getElementById('data-table-body');
 const recordsCount = document.getElementById('records-count');
@@ -86,25 +86,25 @@ const totalRecordsElement = document.getElementById('total-records');
 const confirmationStatsElement = document.getElementById('confirmation-stats');
 const falseDayStatsElement = document.getElementById('falseday-stats');
 const m7BoxConfirmationStatsElement = document.getElementById('m7-box-confirmation-stats');
-const beyondM7BoxStatsElement = document.getElementById('beyond-m7-box-stats');
+const retracementLevelStatsElement = document.getElementById('retracement-level-stats');
 const boxColorHeader = document.getElementById('box-color-header');
 const boxSizeHeader = document.getElementById('box-size-header');
 const confirmationChartTitle = document.getElementById('confirmation-chart-title');
 const falseDayChartTitle = document.getElementById('falseday-chart-title');
 const m7BoxConfirmationChartTitle = document.getElementById('m7-box-confirmation-chart-title');
-const beyondM7BoxChartTitle = document.getElementById('beyond-m7-box-chart-title');
+const retracementLevelChartTitle = document.getElementById('retracement-level-chart-title');
 const returnToM7BoxChartTitle = document.getElementById('return-to-m7-box-chart-title');
 const confirmationDetails = document.getElementById('confirmation-details');
 const falseDayDetails = document.getElementById('falseday-details');
 const m7BoxConfirmationDetails = document.getElementById('m7-box-confirmation-details');
-const beyondM7BoxDetails = document.getElementById('beyond-m7-box-details');
+const retracementLevelDetails = document.getElementById('retracement-level-details');
 const returnToM7BoxDetails = document.getElementById('return-to-m7-box-details');
 
 // Charts
 let confirmationChart;
 let falseDayChart;
 let m7BoxConfirmationChart;
-let beyondM7BoxChart;
+let retracementLevelChart;
 let returnToM7BoxChart;
 
 // State
@@ -113,7 +113,7 @@ let currentColorFilter = '';
 let currentSizeFilter = null;
 let currentConfirmationFilter = '';
 let currentM7BoxConfirmationFilter = '';
-let currentBeyondM7BoxFilter = '';
+let currentM7BoxRetracementLevelFilter = '';
 let currentM7BoxRetracementFilter = '';
 let filteredData = [];
 
@@ -148,8 +148,8 @@ function initializeDashboard() {
     updateDashboard();
   });
   
-  beyondM7BoxFilter.addEventListener('change', function() {
-    currentBeyondM7BoxFilter = this.value;
+  m7BoxRetracementLevelFilter.addEventListener('change', function() {
+    currentM7BoxRetracementLevelFilter = this.value;
     updateDashboard();
   });
   
@@ -188,7 +188,7 @@ function setActiveSession(session) {
   confirmationChartTitle.textContent = `Confirmation Probability by M7 Box Color - ${SESSIONS[session].name}`;
   falseDayChartTitle.textContent = `False Day Probability After Confirmation - ${SESSIONS[session].name}`;
   m7BoxConfirmationChartTitle.textContent = `M7 Box Confirmation Probability - ${SESSIONS[session].name}`;
-  beyondM7BoxChartTitle.textContent = `Beyond M7 Box Probability - ${SESSIONS[session].name}`;
+  retracementLevelChartTitle.textContent = `M7 Box Retracement Level Probability - ${SESSIONS[session].name}`;
   returnToM7BoxChartTitle.textContent = `Probabilities After Return to M7 Box - ${SESSIONS[session].name}`;
 
   // Reset filters
@@ -196,16 +196,16 @@ function setActiveSession(session) {
   sizeFilter.value = '-1';
   confirmationFilter.value = '';
   m7BoxConfirmationFilter.value = '';
-  beyondM7BoxFilter.value = '';
+  m7BoxRetracementLevelFilter.value = '';
   m7BoxRetracementFilter.value = '';
   currentColorFilter = '';
   currentSizeFilter = null;
   currentConfirmationFilter = '';
   currentM7BoxConfirmationFilter = '';
-  currentBeyondM7BoxFilter = '';
+  currentM7BoxRetracementLevelFilter = '';
   currentM7BoxRetracementFilter = '';
 
-  // Update dashboard with new session data
+// Update dashboard with new session data
   updateDashboard();
 }
 
@@ -226,13 +226,6 @@ function filterData() {
     });
   }
   
-  // Apply DR confirmation filter
-  if (currentConfirmationFilter === 'long') {
-    data = data.filter(item => item.drConfirmation === 'long');
-  } else if (currentConfirmationFilter === 'short') {
-    data = data.filter(item => item.drConfirmation === 'short');
-  }
-  
   // Apply M7 Box confirmation filter
   if (currentM7BoxConfirmationFilter === 'yes') {
     data = data.filter(item => item.m7BoxConfirmation);
@@ -240,11 +233,22 @@ function filterData() {
     data = data.filter(item => !item.m7BoxConfirmation);
   }
   
-  // Apply Beyond M7 Box filter
-  if (currentBeyondM7BoxFilter === 'yes') {
-    data = data.filter(item => item.beyondM7Box);
-  } else if (currentBeyondM7BoxFilter === 'no') {
-    data = data.filter(item => !item.beyondM7Box);
+  // Apply DR confirmation filter
+  if (currentConfirmationFilter === 'long') {
+    data = data.filter(item => item.drConfirmation === 'long');
+  } else if (currentConfirmationFilter === 'short') {
+    data = data.filter(item => item.drConfirmation === 'short');
+  } else if (currentConfirmationFilter === 'none') {
+    data = data.filter(item => !item.drConfirmation);
+  }
+  
+  // Apply M7 Box retracement level filter
+  if (currentM7BoxRetracementLevelFilter === 'above') {
+    data = data.filter(item => item.m7BoxRetracementLevel === 'above');
+  } else if (currentM7BoxRetracementLevelFilter === 'inside') {
+    data = data.filter(item => item.m7BoxRetracementLevel === 'inside');
+  } else if (currentM7BoxRetracementLevelFilter === 'below') {
+    data = data.filter(item => item.m7BoxRetracementLevel === 'below');
   }
   
   // Apply M7 Box retracement filter
@@ -303,23 +307,25 @@ function updateDataTable() {
       sizeCell.textContent = item.boxSize;
       row.appendChild(sizeCell);
       
-      // DR Confirmation
-      const confirmationCell = document.createElement('td');
-      confirmationCell.textContent = item.drConfirmation ? item.drConfirmation : 'No';
-      confirmationCell.className = item.drConfirmation ? item.drConfirmation : 'no';
-      row.appendChild(confirmationCell);
-      
-      // M7 Box Confirmation
+      // M7 Box Confirmation - Now before DR Confirmation
       const m7BoxConfirmationCell = document.createElement('td');
       m7BoxConfirmationCell.textContent = item.m7BoxConfirmation ? 'Yes' : 'No';
       m7BoxConfirmationCell.className = item.m7BoxConfirmation ? 'yes' : 'no';
       row.appendChild(m7BoxConfirmationCell);
       
-      // Beyond M7 Box
-      const beyondM7BoxCell = document.createElement('td');
-      beyondM7BoxCell.textContent = item.beyondM7Box ? 'Yes' : 'No';
-      beyondM7BoxCell.className = item.beyondM7Box ? 'yes' : 'no';
-      row.appendChild(beyondM7BoxCell);
+      // DR Confirmation
+      const confirmationCell = document.createElement('td');
+      confirmationCell.textContent = item.drConfirmation ? item.drConfirmation : 'None';
+      confirmationCell.className = item.drConfirmation ? item.drConfirmation : 'none';
+      row.appendChild(confirmationCell);
+      
+      // M7 Box Retracement Level (replacing Beyond M7 Box)
+      const m7BoxRetracementLevelCell = document.createElement('td');
+      m7BoxRetracementLevelCell.textContent = item.m7BoxRetracementLevel ? 
+        (item.m7BoxRetracementLevel === 'above' ? 'Above the M7 Box' : 
+         item.m7BoxRetracementLevel === 'inside' ? 'Inside the M7 Box' : 'Below the M7 Box') : 'N/A';
+      m7BoxRetracementLevelCell.className = item.m7BoxRetracementLevel || 'no';
+      row.appendChild(m7BoxRetracementLevelCell);
       
       // False Day
       const falseDayCell = document.createElement('td');
@@ -356,18 +362,21 @@ function updateStatistics() {
   const shortConfirmationsCount = filteredData.filter(item => item.drConfirmation === 'short').length;
   const falseDaysCount = filteredData.filter(item => item.falseDay).length;
   const m7BoxConfirmationsCount = filteredData.filter(item => item.m7BoxConfirmation).length;
-  const beyondM7BoxCount = filteredData.filter(item => item.beyondM7Box).length;
+  
+  // Retracement level statistics
+  const aboveCount = filteredData.filter(item => item.m7BoxRetracementLevel === 'above').length;
+  const insideCount = filteredData.filter(item => item.m7BoxRetracementLevel === 'inside').length;
+  const belowCount = filteredData.filter(item => item.m7BoxRetracementLevel === 'below').length;
   
   const confirmationPct = totalCount ? (confirmationsCount / totalCount * 100).toFixed(2) : 0;
   const falseDayPct = confirmationsCount ? (falseDaysCount / confirmationsCount * 100).toFixed(2) : 0;
   const m7BoxConfirmationPct = totalCount ? (m7BoxConfirmationsCount / totalCount * 100).toFixed(2) : 0;
-  const beyondM7BoxPct = totalCount ? (beyondM7BoxCount / totalCount * 100).toFixed(2) : 0;
   
   totalRecordsElement.textContent = totalCount;
   confirmationStatsElement.textContent = `${confirmationsCount} (${confirmationPct}%) [Long: ${longConfirmationsCount}, Short: ${shortConfirmationsCount}]`;
   falseDayStatsElement.textContent = `${falseDaysCount} (${falseDayPct}%)`;
   m7BoxConfirmationStatsElement.textContent = `${m7BoxConfirmationsCount} (${m7BoxConfirmationPct}%)`;
-  beyondM7BoxStatsElement.textContent = `${beyondM7BoxCount} (${beyondM7BoxPct}%)`;
+  retracementLevelStatsElement.textContent = `Above: ${aboveCount}, Inside: ${insideCount}, Below: ${belowCount}`;
 }
 
 // Initialize the charts
@@ -487,27 +496,35 @@ function initializeCharts() {
     }
   });
   
-  // Beyond M7 Box probability chart
-  const beyondM7BoxCtx = document.getElementById('beyondM7BoxChart').getContext('2d');
-  beyondM7BoxChart = new Chart(beyondM7BoxCtx, {
+  // Retracement Level chart
+  const retracementLevelCtx = document.getElementById('retracementLevelChart').getContext('2d');
+  retracementLevelChart = new Chart(retracementLevelCtx, {
     type: 'bar',
     data: {
       labels: ['Green', 'Red', 'Equal'],
-      datasets: [{
-        label: 'Beyond M7 Box Probability (%)',
-        data: [0, 0, 0],
-        backgroundColor: [
-          'rgba(75, 192, 192, 0.6)',
-          'rgba(255, 99, 132, 0.6)',
-          'rgba(54, 162, 235, 0.6)'
-        ],
-        borderColor: [
-          'rgba(75, 192, 192, 1)',
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)'
-        ],
-        borderWidth: 1
-      }]
+      datasets: [
+        {
+          label: 'Above M7 Box (%)',
+          data: [0, 0, 0],
+          backgroundColor: 'rgba(75, 192, 192, 0.6)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        },
+        {
+          label: 'Inside M7 Box (%)',
+          data: [0, 0, 0],
+          backgroundColor: 'rgba(255, 205, 86, 0.6)',
+          borderColor: 'rgba(255, 205, 86, 1)',
+          borderWidth: 1
+        },
+        {
+          label: 'Below M7 Box (%)',
+          data: [0, 0, 0],
+          backgroundColor: 'rgba(255, 99, 132, 0.6)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }
+      ]
     },
     options: {
       responsive: true,
@@ -518,7 +535,7 @@ function initializeCharts() {
           max: 100,
           title: {
             display: true,
-            text: 'Probability (%)'
+            text: 'Percentage (%)'
           }
         }
       }
@@ -633,22 +650,40 @@ function updateCharts() {
     <p><strong>Equal M7 Box:</strong> ${m7BoxConfirmationData.equal.probability}% M7 Box confirmation rate (${m7BoxConfirmationData.equal.count}/${m7BoxConfirmationData.equal.total})</p>
   `;
   
-  // Calculate Beyond M7 Box probabilities
-  const beyondM7BoxData = calculateBeyondM7BoxByColor();
+  // Calculate Retracement Level probabilities
+  const retracementLevelData = calculateRetracementLevelByColor();
   
-  // Update Beyond M7 Box chart
-  beyondM7BoxChart.data.datasets[0].data = [
-    beyondM7BoxData.green.probability,
-    beyondM7BoxData.red.probability,
-    beyondM7BoxData.equal.probability
+  // Update Retracement Level chart
+  retracementLevelChart.data.datasets[0].data = [
+    retracementLevelData.green.abovePct,
+    retracementLevelData.red.abovePct,
+    retracementLevelData.equal.abovePct
   ];
-  beyondM7BoxChart.update();
   
-  // Update Beyond M7 Box details
-  beyondM7BoxDetails.innerHTML = `
-    <p><strong>Green M7 Box:</strong> ${beyondM7BoxData.green.probability}% beyond M7 Box rate (${beyondM7BoxData.green.count}/${beyondM7BoxData.green.total})</p>
-    <p><strong>Red M7 Box:</strong> ${beyondM7BoxData.red.probability}% beyond M7 Box rate (${beyondM7BoxData.red.count}/${beyondM7BoxData.red.total})</p>
-    <p><strong>Equal M7 Box:</strong> ${beyondM7BoxData.equal.probability}% beyond M7 Box rate (${beyondM7BoxData.equal.count}/${beyondM7BoxData.equal.total})</p>
+  retracementLevelChart.data.datasets[1].data = [
+    retracementLevelData.green.insidePct,
+    retracementLevelData.red.insidePct,
+    retracementLevelData.equal.insidePct
+  ];
+  
+  retracementLevelChart.data.datasets[2].data = [
+    retracementLevelData.green.belowPct,
+    retracementLevelData.red.belowPct,
+    retracementLevelData.equal.belowPct
+  ];
+  
+  retracementLevelChart.update();
+  
+  // Update Retracement Level details
+  retracementLevelDetails.innerHTML = `
+    <p><strong>Green M7 Box Retracement Levels:</strong></p>
+    <p>&nbsp;&nbsp; - Above: ${retracementLevelData.green.abovePct}% (${retracementLevelData.green.above}/${retracementLevelData.green.total})</p>
+    <p>&nbsp;&nbsp; - Inside: ${retracementLevelData.green.insidePct}% (${retracementLevelData.green.inside}/${retracementLevelData.green.total})</p>
+    <p>&nbsp;&nbsp; - Below: ${retracementLevelData.green.belowPct}% (${retracementLevelData.green.below}/${retracementLevelData.green.total})</p>
+    <p><strong>Red M7 Box Retracement Levels:</strong></p>
+    <p>&nbsp;&nbsp; - Above: ${retracementLevelData.red.abovePct}% (${retracementLevelData.red.above}/${retracementLevelData.red.total})</p>
+    <p>&nbsp;&nbsp; - Inside: ${retracementLevelData.red.insidePct}% (${retracementLevelData.red.inside}/${retracementLevelData.red.total})</p>
+    <p>&nbsp;&nbsp; - Below: ${retracementLevelData.red.belowPct}% (${retracementLevelData.red.below}/${retracementLevelData.red.total})</p>
   `;
   
   // Calculate Return to M7 Box probabilities
@@ -810,30 +845,81 @@ function calculateM7BoxConfirmationByColor() {
   return result;
 }
 
-// Calculate Beyond M7 Box probabilities by M7 Box color
-function calculateBeyondM7BoxByColor() {
+// Calculate Retracement Level distribution by M7 Box color
+function calculateRetracementLevelByColor() {
   const result = {
-    green: { total: 0, count: 0, probability: 0 },
-    red: { total: 0, count: 0, probability: 0 },
-    equal: { total: 0, count: 0, probability: 0 }
+    green: { 
+      total: 0, 
+      above: 0, 
+      inside: 0, 
+      below: 0,
+      abovePct: 0,
+      insidePct: 0,
+      belowPct: 0
+    },
+    red: { 
+      total: 0, 
+      above: 0, 
+      inside: 0, 
+      below: 0,
+      abovePct: 0,
+      insidePct: 0,
+      belowPct: 0
+    },
+    equal: { 
+      total: 0, 
+      above: 0, 
+      inside: 0, 
+      below: 0,
+      abovePct: 0,
+      insidePct: 0,
+      belowPct: 0
+    }
   };
   
   filteredData.forEach(item => {
     if (item.boxColor === 'green') {
       result.green.total++;
-      if (item.beyondM7Box) result.green.count++;
+      if (item.m7BoxRetracementLevel === 'above') {
+        result.green.above++;
+      } else if (item.m7BoxRetracementLevel === 'inside') {
+        result.green.inside++;
+      } else if (item.m7BoxRetracementLevel === 'below') {
+        result.green.below++;
+      }
     } else if (item.boxColor === 'red') {
       result.red.total++;
-      if (item.beyondM7Box) result.red.count++;
+      if (item.m7BoxRetracementLevel === 'above') {
+        result.red.above++;
+      } else if (item.m7BoxRetracementLevel === 'inside') {
+        result.red.inside++;
+      } else if (item.m7BoxRetracementLevel === 'below') {
+        result.red.below++;
+      }
     } else if (item.boxColor === 'equal') {
       result.equal.total++;
-      if (item.beyondM7Box) result.equal.count++;
+      if (item.m7BoxRetracementLevel === 'above') {
+        result.equal.above++;
+      } else if (item.m7BoxRetracementLevel === 'inside') {
+        result.equal.inside++;
+      } else if (item.m7BoxRetracementLevel === 'below') {
+        result.equal.below++;
+      }
     }
   });
   
-  result.green.probability = result.green.total ? parseFloat((result.green.count / result.green.total * 100).toFixed(2)) : 0;
-  result.red.probability = result.red.total ? parseFloat((result.red.count / result.red.total * 100).toFixed(2)) : 0;
-  result.equal.probability = result.equal.total ? parseFloat((result.equal.count / result.equal.total * 100).toFixed(2)) : 0;
+  // Calculate percentages
+  result.green.abovePct = result.green.total ? parseFloat((result.green.above / result.green.total * 100).toFixed(2)) : 0;
+  result.green.insidePct = result.green.total ? parseFloat((result.green.inside / result.green.total * 100).toFixed(2)) : 0;
+  result.green.belowPct = result.green.total ? parseFloat((result.green.below / result.green.total * 100).toFixed(2)) : 0;
+  
+  result.red.abovePct = result.red.total ? parseFloat((result.red.above / result.red.total * 100).toFixed(2)) : 0;
+  result.red.insidePct = result.red.total ? parseFloat((result.red.inside / result.red.total * 100).toFixed(2)) : 0;
+  result.red.belowPct = result.red.total ? parseFloat((result.red.below / result.red.total * 100).toFixed(2)) : 0;
+  
+  result.equal.abovePct = result.equal.total ? parseFloat((result.equal.above / result.equal.total * 100).toFixed(2)) : 0;
+  result.equal.insidePct = result.equal.total ? parseFloat((result.equal.inside / result.equal.total * 100).toFixed(2)) : 0;
+  result.equal.belowPct = result.equal.total ? parseFloat((result.equal.below / result.equal.total * 100).toFixed(2)) : 0;
   
   return result;
 }
