@@ -248,7 +248,25 @@ td.equal {
   color: blue;
 }
 
-/* Yes/No styling */
+/* Confirmation styling */
+td.long {
+  color: green;
+  font-weight: bold;
+}
+
+td.short {
+  color: red;
+  font-weight: bold;
+}
+
+td.before {
+  color: #ff9800;
+}
+
+td.after {
+  color: #9c27b0;
+}
+
 td.yes {
   color: green;
   font-weight: bold;
@@ -271,19 +289,7 @@ td.no {
   margin: 0;
 }
 
-/* Responsive layout */
-@media (min-width: 768px) {
-  .probability-charts {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .chart-container {
-    flex: 1;
-    min-width: 45%;
-  }
-}
-
+/* Responsive layout continued */
 @media (max-width: 768px) {
   .session-options {
     flex-direction: column;
@@ -299,5 +305,13 @@ td.no {
   
   .filters {
     flex-direction: column;
+  }
+  
+  .probability-charts {
+    flex-direction: column;
+  }
+  
+  .chart-container {
+    width: 100%;
   }
 }
