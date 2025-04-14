@@ -86,6 +86,33 @@
                     <option value="23">-2.0 to -1.51</option>
                 </select>
             </div>
+
+            <div class="filter-group">
+                <label>DR Confirmation:</label>
+                <select id="confirmation-filter">
+                    <option value="">All</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>M7 Box Confirmation:</label>
+                <select id="m7-box-confirmation-filter">
+                    <option value="">All</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Beyond M7 Box:</label>
+                <select id="beyond-m7-box-filter">
+                    <option value="">All</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
         </div>
 
         <!-- Stats Section -->
@@ -98,13 +125,23 @@
                 </div>
                 
                 <div class="stat-box">
-                    <h3>Confirmations</h3>
+                    <h3>DR Confirmations</h3>
                     <p id="confirmation-stats">0 (0%)</p>
                 </div>
                 
                 <div class="stat-box">
                     <h3>False Days</h3>
                     <p id="falseday-stats">0 (0%)</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>M7 Box Confirmations</h3>
+                    <p id="m7-box-confirmation-stats">0 (0%)</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>Beyond M7 Box</h3>
+                    <p id="beyond-m7-box-stats">0 (0%)</p>
                 </div>
             </div>
         </div>
@@ -136,6 +173,46 @@
             </div>
         </div>
 
+        <!-- Additional Charts for New Features -->
+        <div class="probability-charts">
+            <div class="chart-container">
+                <h3 id="m7-box-confirmation-chart-title">M7 Box Confirmation Probability - RDR</h3>
+                <div class="chart-wrapper">
+                    <canvas id="m7BoxConfirmationChart"></canvas>
+                </div>
+                <div class="data-details" id="m7-box-confirmation-details">
+                    <p><strong>Green M7 Box:</strong> 0% M7 box confirmation rate (0/0)</p>
+                    <p><strong>Red M7 Box:</strong> 0% M7 box confirmation rate (0/0)</p>
+                    <p><strong>Equal M7 Box:</strong> 0% M7 box confirmation rate (0/0)</p>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3 id="beyond-m7-box-chart-title">Beyond M7 Box Probability - RDR</h3>
+                <div class="chart-wrapper">
+                    <canvas id="beyondM7BoxChart"></canvas>
+                </div>
+                <div class="data-details" id="beyond-m7-box-details">
+                    <p><strong>Green M7 Box:</strong> 0% beyond M7 box rate (0/0)</p>
+                    <p><strong>Red M7 Box:</strong> 0% beyond M7 box rate (0/0)</p>
+                    <p><strong>Equal M7 Box:</strong> 0% beyond M7 box rate (0/0)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post-Return to M7 Box Probabilities -->
+        <div class="chart-container full-width">
+            <h3 id="return-to-m7-box-chart-title">Probabilities After Return to M7 Box - RDR</h3>
+            <div class="chart-wrapper">
+                <canvas id="returnToM7BoxChart"></canvas>
+            </div>
+            <div class="data-details" id="return-to-m7-box-details">
+                <p><strong>False Day Probability:</strong> 0% (0/0)</p>
+                <p><strong>New High Probability (Long):</strong> 0% (0/0)</p>
+                <p><strong>New Low Probability (Short):</strong> 0% (0/0)</p>
+            </div>
+        </div>
+
         <!-- Data Table -->
         <div class="data-table">
             <h2>Recent Data (<span id="records-count">0</span> records)</h2>
@@ -145,8 +222,11 @@
                         <th>Date</th>
                         <th id="box-color-header">RDR M7 Box Color</th>
                         <th id="box-size-header">RDR M7 Box Size</th>
-                        <th>Confirmation</th>
+                        <th>DR Confirmation</th>
+                        <th>M7 Box Confirmation</th>
+                        <th>Beyond M7 Box</th>
                         <th>False Day</th>
+                        <th>Return to M7 Box</th>
                     </tr>
                 </thead>
                 <tbody id="data-table-body">
